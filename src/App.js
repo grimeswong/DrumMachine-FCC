@@ -10,35 +10,40 @@ class App extends React.Component {
     
   }
 
+  playSound(e, key) {
+    console.log(e.target.value);
+    console.log("playSound...")
+  }
+
   render() {
     return (
       <div className="App">Drum Machine FCC
         <div id="drum-machine">
-          <button className="drum-pad">Q
+          <button className="drum-pad" onClick={this.playSound} value="Q">Q
             <audio src="" className="clip" id="id1"></audio>
           </button>
-          <button className="drum-pad">W
+          <button className="drum-pad" onClick={this.playSound} value="W">W
             <audio src="" className="clip" id="id2"></audio>
           </button>
-          <button className="drum-pad">E
+          <button className="drum-pad" onClick={this.playSound} value="E">E
             <audio src="" className="clip" id="id3"></audio>
           </button>
-          <button className="drum-pad">A
+          <button className="drum-pad" onClick={this.playSound} value="A">A
             <audio src="" className="clip" id="id4"></audio>
           </button>
-          <button className="drum-pad">S
+          <button className="drum-pad" onClick={this.playSound} value="S">S
             <audio src="" className="clip" id="id5"></audio>
           </button>
-          <button className="drum-pad">D
+          <button className="drum-pad" onClick={this.playSound} value="D">D
             <audio src="" className="clip" id="id6"></audio>
           </button>
-          <button className="drum-pad">Z
+          <button className="drum-pad" onClick={this.playSound} value="Z">Z
             <audio src="" className="clip" id="id7"></audio>
           </button>
-          <button className="drum-pad">X
+          <button className="drum-pad" onClick={this.playSound} value="X">X
             <audio src="" className="clip" id="id8"></audio>
           </button>
-          <button className="drum-pad">C
+          <button className="drum-pad" onClick={this.playSound} value="C">C
             <audio src="" className="clip" id="id9"></audio>
           </button>
         </div>
