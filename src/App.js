@@ -19,6 +19,7 @@ class App extends React.Component {
   playSound(key) {
     console.log(`key = ${key}`);
     console.log("play sound...")
+    document.querySelector(`#${key}`).play();
   }
 
   render() {
