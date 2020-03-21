@@ -70,7 +70,7 @@ class App extends React.Component {
                 <audio src="" className="clip" id="X"></audio>
               </button>
               <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="C">C
-                <audio src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3" className="clip" id="C"></audio>
+                <audio src="" className="clip" id="C"></audio>
               </button>
             </div>
           </div>
