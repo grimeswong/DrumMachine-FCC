@@ -8,6 +8,7 @@ class App extends React.Component {
     this.state = {
       state: ""
     }
+    this.setDisplay = this.setDisplay.bind(this);
   }
 
   componentDidMount() {
@@ -16,10 +17,16 @@ class App extends React.Component {
     })
   }
 
+  setDisplay(name) {
+    this.setState({
+      state: name
+    })
+  }
+
   playSound(key) {
     console.log(`key = ${key}`);
     console.log("play sound...")
-    document.querySelector(`#${key}`).play();
+    document.getElementById(`${key}`).play()
   }
 
   render() {
@@ -30,7 +37,7 @@ class App extends React.Component {
           <div id="display">{this.state.state}
           </div>
           <div className="drum-pad-wrapper">
-            <Drumpad playSound={this.playSound}/>
+            <Drumpad playSound={this.playSound} setDisplay={this.setDisplay}/>
           </div>
         </div>
       </div>
