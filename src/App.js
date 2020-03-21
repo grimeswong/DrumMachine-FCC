@@ -34,37 +34,46 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">Drum Machine FCC
+      <div className="App">
         <div id="drum-machine">
+          <h1>Drum Machine FCC</h1>
           <div id="display">{this.state.state}
           </div>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="Q">Q
-            <audio src="" className="clip" id="Q"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="W">W
-            <audio src="" className="clip" id="W"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="E">E
-            <audio src="" className="clip" id="E"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="A">A
-            <audio src="" className="clip" id="A"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="S">S
-            <audio src="" className="clip" id="S"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="D">D
-            <audio src="" className="clip" id="D"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="Z">Z
-            <audio src="" className="clip" id="Z"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="X">X
-            <audio src="" className="clip" id="X"></audio>
-          </button>
-          <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="C">C
-            <audio src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3" className="clip" id="C"></audio>
-          </button>
+          <div className="drum-pad-wrapper">
+            <div className="row">
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="Q">Q
+                <audio src="" className="clip" id="Q"></audio>
+              </button>
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="W">W
+                <audio src="" className="clip" id="W"></audio>
+              </button>
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="E">E
+                <audio src="" className="clip" id="E"></audio>
+              </button>
+            </div>
+              <div className="row">
+                <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="A">A
+                  <audio src="" className="clip" id="A"></audio>
+                </button>
+                <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="S">S
+                  <audio src="" className="clip" id="S"></audio>
+                </button>
+                <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="D">D
+                  <audio src="" className="clip" id="D"></audio>
+                </button>
+              </div>
+            <div className="row">
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="Z">Z
+                <audio src="" className="clip" id="Z"></audio>
+              </button>
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="X">X
+                <audio src="" className="clip" id="X"></audio>
+              </button>
+              <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="C">C
+                <audio src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3" className="clip" id="C"></audio>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );
