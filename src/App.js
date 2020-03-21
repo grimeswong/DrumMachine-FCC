@@ -5,6 +5,9 @@ import matchCode from './matchCode.js';
 class App extends React.Component {
   constructor() {
     super();
+    this.state = {
+      state: ""
+    }
   }
 
   componentDidMount() {
@@ -21,6 +24,9 @@ class App extends React.Component {
     console.log("playSound...");
     if(getCode!==undefined){
       document.querySelector('#'+ getCode.key).play()
+      this.setState({
+        state: getCode.name
+      })
     };
   }
 
@@ -28,6 +34,8 @@ class App extends React.Component {
     return (
       <div className="App">Drum Machine FCC
         <div id="drum-machine">
+          <div id="display">{this.state.state}
+          </div>
           <button className="drum-pad" onClick={(e)=>this.playSound(e, "click")} value="Q">Q
             <audio src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3" className="clip" id="Q"></audio>
           </button>
