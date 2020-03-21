@@ -26,7 +26,9 @@ class App extends React.Component {
   playSound(key) {
     console.log(`key = ${key}`);
     console.log("play sound...")
-    document.getElementById(`${key}`).play()
+    const playclip = document.getElementById(`${key}`);
+    playclip.currentTime = 0; // Avoid the clip delay due to another command is coming up
+    playclip.play();
   }
 
   render() {
